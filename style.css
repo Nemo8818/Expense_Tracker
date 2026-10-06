@@ -1,0 +1,55 @@
+:root{font-family:'DM Sans',sans-serif;color:#202a3a;background:#f4f7fb;font-synthesis:none;text-rendering:optimizeLegibility;--ink:#202a3a;--muted:#8993a4;--line:#edf0f5;--purple:#6455e8;--green:#27a77b;--red:#e16d75}
+*{box-sizing:border-box}
+body{margin:0;min-width:320px;min-height:100vh;background:radial-gradient(ellipse at 6% 3%,#ebe9ff 0,transparent 27%),radial-gradient(ellipse at 93% 27%,#e6f7f1 0,transparent 23%),#f5f7fb}
+button,input{font:inherit}
+button{cursor:pointer}
+.app-shell{width:min(1100px,calc(100% - 48px));margin:0 auto;padding:53px 0 28px}
+.page-header{display:flex;align-items:center;gap:17px;margin-bottom:35px}
+.brand-mark{display:grid;place-items:center;width:55px;height:55px;border-radius:17px;background:linear-gradient(145deg,#7668f3,#5545d7);color:white;font:800 27px 'Manrope',sans-serif;box-shadow:0 10px 22px #6455e83b}
+.eyebrow{margin:0 0 6px;color:#9aa3b1;font-size:10px;font-weight:700;letter-spacing:1.55px}
+h1,h2,h3,p{margin-top:0}
+h1{margin-bottom:4px;font:800 28px 'Manrope',sans-serif;letter-spacing:-.8px}
+.subtitle{margin:0;color:#8a94a3;font-size:13px}
+.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px;margin-bottom:22px}
+.summary-card,.panel{background:#fff;border:1px solid #eef0f5;border-radius:17px;box-shadow:0 8px 30px #28334b08}
+.summary-card{padding:21px 23px 19px;min-height:116px}
+.summary-heading{display:flex;align-items:center;gap:9px;color:#858e9d;font-size:12px;font-weight:600}
+.summary-icon{display:grid;place-items:center;width:25px;height:25px;border-radius:8px;background:#eefbf6;color:var(--green);font-size:16px;font-weight:700}
+.expense-card .summary-icon{background:#fff1f1;color:var(--red)}.balance-card .summary-icon{background:#f0efff;color:var(--purple)}
+.summary-value{margin:10px 0 0 34px;color:var(--ink);font:700 24px 'Manrope',sans-serif;letter-spacing:-.6px}
+.content-grid{display:grid;grid-template-columns: minmax(270px,.78fr) minmax(0,1.45fr);gap:18px;align-items:stretch}
+.panel{padding:23px 24px}
+.panel-heading,.transactions-heading{display:flex;align-items:center;justify-content:space-between}
+.panel-heading{margin-bottom:23px}.panel h2{margin:0;font:700 17px 'Manrope',sans-serif;letter-spacing:-.35px}
+.heading-sparkle{color:#b7b0fb;font-size:21px}
+form{display:flex;flex-direction:column}
+form>label,.type-fieldset legend{margin:0 0 8px;color:#586273;font-size:11px;font-weight:700}
+input[type=text],.amount-input{width:100%;height:43px;border:1px solid #e8ebf1;border-radius:9px;background:#fbfcfe;color:var(--ink);outline:none;transition:border-color .2s,box-shadow .2s}
+input[type=text]{padding:0 12px;margin-bottom:17px}
+input::placeholder{color:#b2bac6}
+input[type=text]:focus,.amount-input:focus-within{border-color:#9c94f7;box-shadow:0 0 0 3px #6455e812}
+.amount-input{display:flex;align-items:center;gap:9px;padding:0 12px;margin-bottom:18px;color:#a4adba;font-size:14px}
+.amount-input input{width:100%;height:100%;border:0;outline:0;background:transparent;color:var(--ink)}
+.type-fieldset{border:0;margin:0 0 20px;padding:0}.type-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.type-option{position:relative;display:flex;align-items:center;gap:8px;min-height:41px;padding:0 10px;border:1px solid #e9ecf2;border-radius:9px;color:#697384;font-size:12px;font-weight:600;cursor:pointer;transition:.2s}
+.type-option input{position:absolute;opacity:0;pointer-events:none}.radio-dot{width:14px;height:14px;border:1.5px solid #cbd1db;border-radius:50%;position:relative}
+.type-option:has(input:checked){border-color:#b7b1f6;background:#f8f7ff;color:#5345d3}.type-option:has(input:checked) .radio-dot{border-color:var(--purple)}.type-option:has(input:checked) .radio-dot:after{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--purple)}
+.type-option:focus-within{outline:3px solid #6455e822}
+.primary-button{display:flex;justify-content:center;align-items:center;gap:8px;min-height:44px;border:0;border-radius:9px;background:linear-gradient(110deg,#6d5fea,#5545d8);color:#fff;font-size:12px;font-weight:700;box-shadow:0 6px 14px #6455e82a;transition:transform .15s,box-shadow .15s}
+.primary-button:hover{transform:translateY(-1px);box-shadow:0 8px 18px #6455e83b}.primary-button:active{transform:translateY(0)}
+.privacy-note{display:flex;align-items:center;justify-content:center;gap:6px;margin:15px 0 0;color:#a2aab6;font-size:10px}
+.transactions-panel{min-height:365px}.transactions-heading{margin-bottom:16px}.transactions-heading .eyebrow{margin-bottom:5px}
+.count-badge{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 6px;margin-left:4px;border-radius:7px;background:#f0efff;color:#6455e8;font:700 10px 'DM Sans',sans-serif;vertical-align:2px}
+.clear-button{padding:7px 10px;border:1px solid #f0e8e9;border-radius:7px;background:#fff;color:#ce7077;font-size:10px;font-weight:600}.clear-button:hover:not(:disabled){background:#fff5f5}.clear-button:disabled{border-color:#eff1f4;color:#c0c6cf;cursor:not-allowed}
+.transaction-list{list-style:none;padding:0;margin:0}.transaction-item{display:flex;align-items:center;gap:11px;padding:12px 0;border-bottom:1px solid #f0f2f6;animation:appear .22s ease both}.transaction-item:last-child{border-bottom:0}
+.transaction-symbol{display:grid;place-items:center;flex:0 0 36px;height:36px;border-radius:11px;background:#effaf6;color:var(--green);font-size:16px;font-weight:700}.transaction-item.expense .transaction-symbol{background:#fff2f2;color:var(--red)}
+.transaction-details{flex:1;min-width:0}.transaction-description{overflow:hidden;margin:0 0 3px;color:#3b4555;font-size:12px;font-weight:700;text-overflow:ellipsis;white-space:nowrap}.transaction-meta{margin:0;color:#a0a8b5;font-size:10px}
+.transaction-amount{margin:0 9px 0 0;color:var(--green);font:700 12px 'Manrope',sans-serif;white-space:nowrap}.transaction-item.expense .transaction-amount{color:var(--red)}
+.delete-button{display:grid;place-items:center;width:29px;height:29px;border:0;border-radius:7px;background:transparent;color:#b6bec9;font-size:17px;transition:.15s}.delete-button:hover,.delete-button:focus-visible{background:#fff1f1;color:#d8636d;outline:none}
+.empty-state{display:flex;flex-direction:column;align-items:center;text-align:center;padding:37px 10px 25px}.empty-state[hidden]{display:none}.empty-illustration{position:relative;display:flex;align-items:center;justify-content:center;width:74px;height:65px;margin-bottom:13px;border-radius:20px;background:#f5f4ff;color:#8175ed;font-size:22px;gap:14px}.empty-illustration span:first-child{transform:translateY(-5px)}.empty-illustration span:nth-child(2){transform:translateY(5px)}.empty-illustration i{position:absolute;width:20px;height:20px;border:2px solid #c8c3fb;border-radius:50%;right:8px;top:7px;background:#f5f4ff}
+.empty-state h3{margin-bottom:5px;color:#4a5565;font:700 13px 'Manrope',sans-serif}.empty-state p{margin:0;color:#a0a8b5;font-size:11px;line-height:1.6}
+footer{padding-top:24px;text-align:center;color:#a4acb8;font-size:10px}footer span{color:#a59cf5}
+@keyframes appear{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:720px){.app-shell{width:min(560px,calc(100% - 32px));padding-top:34px}.summary-grid{gap:10px}.summary-card{padding:17px 13px;min-height:105px}.summary-heading{gap:6px;font-size:10px}.summary-icon{width:22px;height:22px}.summary-value{margin-left:28px;font-size:19px}.content-grid{grid-template-columns:1fr}.transactions-panel{min-height:315px}}
+@media(max-width:430px){.app-shell{width:calc(100% - 26px);padding-top:25px}.page-header{gap:12px;margin-bottom:23px}.brand-mark{width:47px;height:47px;border-radius:14px;font-size:23px}h1{font-size:23px}.subtitle{font-size:11px}.summary-grid{grid-template-columns:1fr;gap:8px}.summary-card{display:flex;align-items:center;justify-content:space-between;min-height:75px;padding:13px 15px}.summary-value{margin:0;font-size:20px}.summary-heading{font-size:11px}.summary-icon{width:25px;height:25px}.content-grid{gap:12px}.panel{padding:20px 18px}.transactions-panel{min-height:300px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
